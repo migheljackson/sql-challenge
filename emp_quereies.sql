@@ -39,3 +39,14 @@ on d.dept_no=de.dept_no
 inner join employees as e
 on de.emp_no=e.emp_no
 where dept_name like '%ales%';
+
+--List employees in the Sales and Development departments
+select de.emp_no,e.last_name,e.first_name,d.dept_name
+from departments as d
+inner join dept_emp as de
+on d.dept_no=de.dept_no
+inner join employees as e
+on de.emp_no=e.emp_no
+where dept_name like '%ales%'
+or dept_name like '%evelopment%';
+
