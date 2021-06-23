@@ -16,3 +16,12 @@ inner join dept_manager as dm
 on d.dept_no=dm.dept_no
 inner join employees as e
 on dm.emp_no=e.emp_no;
+
+--List department of each employee
+select de.emp_no,e.last_name,e.first_name,d.dept_name
+from departments as d
+inner join dept_emp as de
+on d.dept_no=de.dept_no
+inner join employees as e
+on de.emp_no=e.emp_no;
+
