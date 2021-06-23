@@ -30,3 +30,12 @@ select first_name,last_name,sex
 from employees
 where first_name='Hercules'
 and last_name like 'B%';
+
+--List employees in the Sales department
+select de.emp_no,e.last_name,e.first_name,d.dept_name
+from departments as d
+inner join dept_emp as de
+on d.dept_no=de.dept_no
+inner join employees as e
+on de.emp_no=e.emp_no
+where dept_name like '%ales%';
