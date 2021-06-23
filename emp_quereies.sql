@@ -25,3 +25,8 @@ on d.dept_no=de.dept_no
 inner join employees as e
 on de.emp_no=e.emp_no;
 
+--List info for employees named Herclues B*
+select first_name,last_name,sex
+from employees
+where first_name='Hercules'
+and last_name like 'B%';
