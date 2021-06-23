@@ -50,3 +50,8 @@ on de.emp_no=e.emp_no
 where dept_name like '%ales%'
 or dept_name like '%evelopment%';
 
+--Count the frequency of last names and order by largest to smallest
+select last_name,count(emp_no) as name_count
+from employees
+group by last_name
+order by name_count desc;
